@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  
+spring:
+  application:
+    name: Zuul-Api-Gateway
+    
+eureka:
+  instance:
+    hostname: localhost
+
+zuul:
+  routes:
+      search-service:
+        url: http://localhost:8084
+      booking-service:
+        url: http://localhost:8081
+      fair:
+        url: http://localhost:8083
+      checkin-service:
+        url: http://localhost:8082
